@@ -14,10 +14,10 @@ substitutions:
 # replace this with your own
 ##########################################################
 
-  climate_entity: climate.livingroom
-  min_value: "15"
-  max_value: "35"
-  initial_value: "20"
+  climate_entity: climate.esphome_web_cf86ec_family_room_heat_pump
+  min_value: "50"
+  max_value: "80"
+  initial_value: "70"
 
 ##########################################################
 # /end customizing
@@ -41,7 +41,7 @@ esphome:
   # special board needs special options    
   platformio_options:
     platform: https://github.com/platformio/platform-espressif32.git
-    board: esp32-s2-saola-1
+    board: esp32-s3-devkitc-1
     framework: arduino
     platform_packages:
       - framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32    
@@ -51,7 +51,7 @@ esphome:
       - script.execute: show_page_boot
 
 esp32:
-  board: esp32-s2-saola-1
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
     version: latest
@@ -67,7 +67,7 @@ ota:
 
 # This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://velijv/nesp/nesp.yaml@main
+  package_import_url: github://justinmahood/nesp/nesp.yaml@main
 
 wifi:
   # Set up a wifi access point using the device name above
